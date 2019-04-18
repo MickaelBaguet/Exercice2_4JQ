@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Exercice 2</title>
+</head>
+<body>
+  <div class="container-fluid text-center">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">Exercice 2 - JQuery</h1>
+        <h3>Partie 2</h3>
+        <p class="lead">Modication au double clique</p>
+      </div>
+    </div>
+    <img src="assets/images/image.jpg" id="image" />
+  </div>
+  <script src="assets\js\jquery-3.3.1.min.js"></script>
+  <script>
+    // Fonction modifiant le width sur une double clique de l'image
+    $(document).ready(function(){
+      $("#image").dblclick(function(){
+        $(this).width(500);
+      });
+    });
+  </script>
+</body>
+</html>
