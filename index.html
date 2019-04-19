@@ -10,19 +10,29 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-3">Exercice 2 - JQuery</h1>
-        <h3>Partie 2</h3>
-        <p class="lead">Modication au double clique</p>
+        <h3>Partie 3</h3>
+        <p class="lead">Incrémenter/Décrémenter</p>
       </div>
     </div>
-    <img src="assets/images/image.jpg" id="image" />
+    <p id="nbr">0</p>
+    <button type="button" name="button" id="plus">+1</button>
+    <button type="button" name="button" id="minus">-1</button>
+
   </div>
   <script src="assets\js\jquery-3.3.1.min.js"></script>
   <script>
-    // Fonction modifiant le width sur une double clique de l'image
     $(document).ready(function(){
-      $("#image").dblclick(function(){
-        $(this).width(500);
-      });
+      var cpt = 0;
+      // Fonction qui incrémente un text à chaque clique
+      $("#plus").click(function() {
+        // On affiche la valeur du compteur sur le <p>
+          $("#nbr").text(++cpt);
+        })
+      // Fonction qui décrémente un text à chaque clique
+      $("#minus").click(function() {
+        // On affiche la valeur du compteur sur le <p>
+          $("#nbr").text(--cpt);
+        })
     });
   </script>
 </body>
