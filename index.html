@@ -44,14 +44,14 @@
         var nbNote = 0;
         var test = true;
         var average = 0;
-        // Fonction faite sur toute les classes nbr
+        // Fonction faite sur toute les classes nbr, sera répété pour chaque champ de la classe nbr
         $('.nbr').each(function(){
-          // On récupère la valeur du champ
+          // On récupère la valeur du champ sur lequel on est
           var note = Number($(this).val());
           // S'il n'est pas valide le test pour la moyenne sera faux
           if ((note < 0) || (note > 20)) {
             test = false;
-            // Sinon on additionne la note au total, total prendra la valeur de tout les champs pour chaque each
+            // Sinon on additionne la note au total, total s'additionnera avec toute les notes entrées
           } else {
             total += note;
             nbNote++;
