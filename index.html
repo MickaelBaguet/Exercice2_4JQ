@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Exercice 2</title>
 </head>
 <body>
   <div class="container-fluid text-center">
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
+        <span class="sommaire"><a href="../index.html">Sommaire</a></span>
         <h1 class="display-3">Exercice 2 - JQuery</h1>
         <h3>Partie 4</h3>
         <p class="lead">Moyenne et appréciation</p>
@@ -31,11 +33,10 @@
   <script>
     $(document).ready(function(){
 
-      // Fonction prévenant le rafraichissement de la page à cause du submit
+      // preventDefault(): permets de ne pas prendre en compte le fonctionnement normal du submit
       $("#formAverage").submit(function(e) {
         e.preventDefault();
       });
-
       $('#average').click(function()
       {
         // Réinitialisation des variables si plusieurs moyennes calculées avant rafraichissement
@@ -58,7 +59,7 @@
           }
         });
         // Calcule de la moyenne
-        average = total / nbNote;
+        average = (total / nbNote).toFixed(2);
         // Si tout les nombres étaient valides
         if (test) {
           if (average >= 0 && average < 10) {
